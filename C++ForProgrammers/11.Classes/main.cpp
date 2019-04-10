@@ -2,8 +2,7 @@
 using namespace std;
 
 
-class Student
-{
+class Student {
         string name;
         int id;
         int gradDate;
@@ -18,43 +17,35 @@ class Student
         void print();
 };
 
-void Student::setName(string nameIn)
-{
+void Student::setName(string nameIn) {
      name = nameIn;
 }
 
-void Student::setId(int idIn)
-{
+void Student::setId(int idIn) {
      id = idIn;
 }
 
-void Student::setGradDate(int gradDateIn)
-{
+void Student::setGradDate(int gradDateIn) {
      gradDate = gradDateIn;
 }
 
-void Student::print()
-{
+void Student::print() {
      cout<<name<<" "<<id<<" "<<gradDate;
 }
 
-string Student::getName()
-{
+string Student::getName() {
      return name;
 }
 
-int Student::getId()
-{
+int Student::getId() {
      return id; 
 }
 
-int Student::getGradDate()
-{
+int Student::getGradDate() {
      return gradDate;
 }
 
-int main()
-{
+int main() {
     int integer1; 
     float float1;
     Student student1; 
