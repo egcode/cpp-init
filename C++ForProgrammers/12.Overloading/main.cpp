@@ -7,17 +7,19 @@ class Square {
         int length;
         int width;
     public:
-        Square();
-        Square(int lenIn, int widIn);
+        Square(); 
+        Square(int lenIn, int widIn); 
         int getLength();
         int getWidth();
 };
 
+// Constructor #1
 Square::Square() {
     length = 0;
     width = 0;
 }
 
+// Constructor #2
 Square::Square(int lenIn, int widIn) {
     length = lenIn;
     width = widIn;
