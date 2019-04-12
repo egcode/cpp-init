@@ -30,5 +30,19 @@ int main () {
   for (it = vectorInts.begin(); it != vectorInts.end(); ++it)
     std::cout<<*it<<" ";
  
+   // Erase range from vector
+   std::cout<<"\nAfter range erase, the vector has these elements:\n";
+   vectorInts.erase(vectorInts.begin()+1, vectorInts.begin()+3);
+   for (it = vectorInts.begin(); it != vectorInts.end(); ++it)
+    std::cout<<*it<<" ";
+
+
+   //clear the vector
+  vectorInts.clear();
+  std::cout<<"\nAfter clear, the vector has these elements:\n";
+  for (it = vectorInts.begin(); it != vectorInts.end(); ++it)
+    std::cout<<*it<<" ";
+
+
   return 0;
 }
