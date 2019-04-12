@@ -42,6 +42,12 @@ int main () {
    for (it = vectorInts.begin(); it != vectorInts.end(); ++it)
     std::cout<<*it<<" ";
 
+   // Remove last element in the vector
+   std::cout<<"\nAfter removing last element:\n";
+   vectorInts.pop_back();
+   for (it = vectorInts.begin(); it != vectorInts.end(); ++it)
+    std::cout<<*it<<" ";
+
 
    //clear the vector
   vectorInts.clear();
