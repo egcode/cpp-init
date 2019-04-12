@@ -1,64 +1,40 @@
 // MORE INFO
 // https://stackoverflow.com/questions/2391679/why-do-we-need-virtual-functions-in-c
+
 #include<iostream>
 #include<string>
-using namespace std;
 
-//Employee is a class for calculating the
-//pay for an hourly employee. 
-class Employee {
-    private:
-        float payRate;
-        string name;
-        int employeeNumber;
+class Animal {
     public:
-        void setPayRate(float rateIn);
-        float getPayRate();
-        //This is now a virtual function
-        virtual float calcWeeklyPay(); 
-};
-void Employee::setPayRate(float rateIn) {
-    payRate = rateIn;
-}
-float Employee::getPayRate() {
-    return payRate;
-}
-float Employee::calcWeeklyPay() {
-    return 40 * payRate;
-}
+        // void eat() { std::cout << "\nI'm eating generic food."; }
+        virtual void eat() { std::cout << "\nI'm eating generic food."; }
 
-
-//The class manager inherits from Employee
-//The only difference... managers are salary
-//employees. So the pay is calculated differently.
-class Manager : public Employee {
-    public:
-        float calcWeeklyPay();
 };
 
-float Manager::calcWeeklyPay() {
-    //weekly pay is based on the yearly salary
-    //divided by 52 weeks
-    return Employee::getPayRate() /52;
-}
+class Cat : public Animal {
+    public:
+        void eat() { std::cout << "\nI'm eating a rat."; }
+};
 
+
+void someFunction(Animal *xyz) { xyz->eat(); }
 
 
 int main() {
-    const string status = "salary"; //options: hourly or salary
-    string level;
-    level = "salary";
-    Employee *e1; //e1 is now a pointer to Employee object
-    
-    if(status != level) {
-        e1 = new Employee(); //we define an hourly employee
-    } else {
-        e1 = new Manager(); //we define a salaried employee
-    }  
-    
-    e1->setPayRate(12000.00);
-    cout<<"It works!\n";
-    cout<<"e1 pay: $"<<e1->calcWeeklyPay();
-    delete e1;
+    Animal *animal = new Animal;
+    Cat *cat = new Cat;
+
+    animal->eat(); // Outputs: "I'm eating generic food."
+    cat->eat();    // Outputs: "I'm eating a rat."
+    std::cout << "\n=======================";
+
+    // Without Virtual word
+    someFunction(animal); // Outputs: "I'm eating generic food."
+    someFunction(cat);    // Outputs: "I'm eating generic food."
+
+    // With Virtual word
+    someFunction(animal); // Outputs: "I'm eating generic food."
+    someFunction(cat);    // Outputs: "I'm eating a rat."
+
     return 0;
 }
