@@ -1,6 +1,8 @@
 #include <iostream>
 #include <vector>
 
+// emplace is in c++11
+// g++ -std=c++11 mainInsertWithIterator.cpp
 
 int main () {
   //creating a vector of integers
@@ -26,21 +28,24 @@ int main () {
  
   //insert an element after the first element
   it  = vectorInts.begin() + 1;
-  vectorInts.insert(it, -1);
+//   vectorInts.insert(it, -1);
+  vectorInts.emplace(it, -1);
   std::cout<<"\n\nAfter the insert\n";
 for (it = vectorInts.begin(); it != vectorInts.end(); ++it)
     std::cout<<*it<<" ";
     
   //insert an element after the third element
   it  = vectorInts.begin();
-  vectorInts.insert(it + 3, -2);
+//   vectorInts.insert(it + 3, -2);
+  vectorInts.emplace(it + 3, -2);
   std::cout<<"\n\nAfter the insert\n";
 for (it = vectorInts.begin(); it != vectorInts.end(); ++it)
     std::cout<<*it<<" ";
 
   //insert an element after the third element
   it  = vectorInts.begin();
-  vectorInts.insert(it + 5, -3);
+//   vectorInts.insert(it + 5, -3);
+  vectorInts.emplace(it + 5, -3);
   std::cout<<"\n\nAfter the insert\n";
 for (it = vectorInts.begin(); it != vectorInts.end(); ++it)
     std::cout<<*it<<" ";
