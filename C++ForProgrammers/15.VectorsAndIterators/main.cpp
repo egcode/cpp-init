@@ -30,6 +30,12 @@ int main () {
   for (it = vectorInts.begin(); it != vectorInts.end(); ++it)
     std::cout<<*it<<" ";
  
+   // erase the 6th element
+   std::cout<<"\nAfter erase 3rd element, the vector has these elements:\n";
+   vectorInts.erase (vectorInts.begin()+2);
+   for (it = vectorInts.begin(); it != vectorInts.end(); ++it)
+    std::cout<<*it<<" ";
+
    // Erase range from vector
    std::cout<<"\nAfter range erase, the vector has these elements:\n";
    vectorInts.erase(vectorInts.begin()+1, vectorInts.begin()+3);
