@@ -1,3 +1,6 @@
+// C++ 11
+// g++ -std=c++11 main1_PrintGeneric.cp
+
 #include <iostream>
 #include <vector>
 
