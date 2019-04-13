@@ -5,6 +5,8 @@ template <typename T>
 void printVector(std::vector<T> vIn);
 
 
+
+///// Start of Custom Print Object
 class Eugene {
     public:
      int matiya;
@@ -22,6 +24,7 @@ std::ostream& operator<<(std::ostream& os, const Eugene& dt) {
     os << dt.matiya << '|' << dt.eg << '|' << dt.matiya;
     return os;
 }
+///// End of Custom Print Object
 
 
 
