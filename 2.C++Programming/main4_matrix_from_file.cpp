@@ -39,6 +39,7 @@ int main() {
             while(ss >> i) {
                 row.push_back(i);
 
+                // The line ss.peek() looks at the next character to see if it is a comma or a space and ignores commas or spaces.
                 if (ss.peek() == ',' || ss.peek() == ' ') {
                     ss.ignore();
                 }
