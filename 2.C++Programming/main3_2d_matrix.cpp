@@ -6,7 +6,7 @@ using namespace std;
 int main() {
 
     // declare 2 dimentional vector of type int
-    vector < vector<int> > twodvector;
+    vector< vector<int> >twodvector;
 
     // setup a row 
     vector<int> singlerow(3,2);
