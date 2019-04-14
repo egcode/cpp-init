@@ -18,6 +18,7 @@ int main() {
     if (outputfile.is_open()) {
         for (int row = 0; row < matrix.size(); row++) {
             for (int column = 0; column < matrix[row].size(); column++) {
+                // If the current value is the end of a row, it's not necessary to put a comma separator after the number
                 if (column != matrix[row].size() - 1) {
                     outputfile << matrix[row][column] << ", ";
                 } else {
