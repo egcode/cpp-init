@@ -1,12 +1,9 @@
 // C++ 11
-// g++ -std=c++11 main1_PrintGeneric.cp
+// g++ -std=c++11 main1_print_object.cpp
 
 #include <iostream>
 #include <vector>
-
-template <typename T>
-void printVector(std::vector<T> vIn);
-
+#include "main.hpp"
 
 
 ///// Start of Custom Print Object
@@ -31,7 +28,6 @@ std::ostream& operator<<(std::ostream& os, const Eugene& dt) {
 
 
 
-
 int main () {
     std::vector<int> intvariable(5);
     for(int i;i<5;i++) {
@@ -47,17 +43,13 @@ int main () {
     std::vector<float> myvector2 = {5.0, 3.0, 2.7, 8.2, 7.9};
     printVector(myvector2);
 
+    std::cout<<"\n\nPrinting Array of Eugene Objects:";
     std::vector<Eugene> shit(5);
     printVector(shit);
 
+    std::cout<<std::endl<<std::endl;
+    std::cout<<"Printing Single Eugene Object: \n"<<Eugene();
+
+
     return 0;
-}
-
-
-template <typename T>
-void printVector(std::vector<T> vIn) {
-  std::cout<<"\nPrinting Vector:"<<"\n";
-  typename std::vector<T>::iterator it;
-  for (it = vIn.begin(); it != vIn.end(); ++it)
-    std::cout<<*it<<" ";
 }
