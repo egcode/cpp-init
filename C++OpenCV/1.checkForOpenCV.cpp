@@ -1,5 +1,7 @@
 #include "opencv2/opencv.hpp"
  
+ // build g++ $(pkg-config --cflags --libs opencv) file.cpp
+ 
 using namespace cv;
 using namespace std;
  
