@@ -1,7 +1,8 @@
 #include "opencv2/opencv.hpp"
  
- // build g++ $(pkg-config --cflags --libs opencv) file.cpp
- 
+// build g++ $(pkg-config --cflags --libs opencv) file.cpp
+// g++ $(pkg-config --cflags --libs /usr/local/Cellar/opencv/4.1.0_1/lib/pkgconfig/opencv4.pc) -std=c++11 1.checkForOpenCV.cpp
+
 using namespace cv;
 using namespace std;
  
