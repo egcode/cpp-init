@@ -8,7 +8,7 @@
 ln -s /usr/local/Cellar/opencv/4.1.0_1/lib/pkgconfig/opencv4.pc /usr/local/lib/pkgconfig/opencv4.pc
 */ 
 
-// g++ $(pkg-config --cflags --libs opencv4) -std=c++11 1.checkForOpenCV.cpp
+// g++ $(pkg-config --cflags --libs opencv) -std=c++11 1.checkForOpenCV.cpp
 // g++ $(pkg-config --cflags --libs /usr/local/Cellar/opencv/4.1.0_1/lib/pkgconfig/opencv4.pc) -std=c++11 1.checkForOpenCV.cpp
 
 using namespace cv;
