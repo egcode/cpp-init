@@ -5,7 +5,7 @@
 /*
 1.install opencv4 with brew `brew install opencv@4`
 2.create link  in pkgconfig with command `ln -s /path/to/original /path/to/symlink`
-ln -s /usr/local/Cellar/opencv/4.1.0_1/lib/pkgconfig/opencv4.pc /usr/local/lib/pkgconfig/opencv4.pc
+ln -s /usr/local/Cellar/opencv/4.1.0_1/lib/pkgconfig/opencv4.pc /usr/local/lib/pkgconfig/opencv.pc
 */ 
 
 // g++ $(pkg-config --cflags --libs opencv) -std=c++11 1.checkForOpenCV.cpp
