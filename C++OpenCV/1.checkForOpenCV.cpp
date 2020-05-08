@@ -4,7 +4,8 @@
 
 /*
 1.install opencv4 with brew `brew install opencv@4`
-2.create link  in pkgconfig with command `ln -s /path/to/original /path/to/symlink`
+2.find .pc file `find /usr/local/Cellar -name \*.pc | grep opencv`
+3.create link  in pkgconfig with command `ln -s /path/to/original /path/to/symlink`
 ln -s /usr/local/Cellar/opencv/4.3.0/lib/pkgconfig/opencv4.pc /usr/local/lib/pkgconfig/opencv.pc
 */ 
 
