@@ -11,18 +11,28 @@ if len(sys.argv) != 2:
   print("Usage:", sys.argv[0], "DATASET_FILE")
   sys.exit(-1)
 
-face_data = face_dataset_pb2.Face()
+dataset = face_dataset_pb2.Dataset()
 
 # Read the existing address book.
 f = open(sys.argv[1], "rb")
-face_data.ParseFromString(f.read())
+dataset.ParseFromString(f.read())
 f.close()
 
 
-print(60*"=" + "Print Class")
-print(face_data)
+print(60*"=" + "Print Dataset")
+print(dataset)
 print(60*"=")
 
-print(60*"=" + "Print As String")
-print(face_data.SerializeToString())
+
+print(60*"=" + "Print Dataset as a String")
+print(dataset.SerializeToString())
+print(60*"=")
+
+
+print(60*"=" + "Loop")
+for descriptor in dataset.DESCRIPTOR.fields:
+    extractedFaces = getattr(dataset, descriptor.name)
+    for i in range(len(extractedFaces)): 
+        print("\nFace: " + str(i) + " " + extractedFaces[i].name)
+        print("Embedding: " + str(extractedFaces[i].embeddings))
 print(60*"=")

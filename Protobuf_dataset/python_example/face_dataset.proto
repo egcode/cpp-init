@@ -8,5 +8,5 @@ message Face {
 }
 
 message Dataset {
-  repeated Face face = 1;
+  repeated Face faces = 1;
 }
