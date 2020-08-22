@@ -4,7 +4,7 @@ package dataset;
 
 message Face {
   required string name = 1;
-  repeated double embeddings = 5 [packed=true];
+  repeated double embeddings = 2 [packed=true];
 }
 
 message Dataset {

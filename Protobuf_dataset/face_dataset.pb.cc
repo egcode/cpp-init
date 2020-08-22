@@ -87,7 +87,7 @@ static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] =
 
 const char descriptor_table_protodef_face_5fdataset_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
   "\n\022face_dataset.proto\022\007dataset\",\n\004Face\022\014\n"
-  "\004name\030\001 \002(\t\022\026\n\nembeddings\030\005 \003(\001B\002\020\001\"&\n\007D"
+  "\004name\030\001 \002(\t\022\026\n\nembeddings\030\002 \003(\001B\002\020\001\"&\n\007D"
   "ataset\022\033\n\004face\030\001 \003(\0132\r.dataset.Face"
   ;
 static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_face_5fdataset_2eproto_deps[1] = {
@@ -209,12 +209,12 @@ const char* Face::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::inter
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // repeated double embeddings = 5 [packed = true];
-      case 5:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 42)) {
+      // repeated double embeddings = 2 [packed = true];
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedDoubleParser(_internal_mutable_embeddings(), ptr, ctx);
           CHK_(ptr);
-        } else if (static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 41) {
+        } else if (static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 17) {
           _internal_add_embeddings(::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr));
           ptr += sizeof(double);
         } else goto handle_unusual;
@@ -259,9 +259,9 @@ failure:
         1, this->_internal_name(), target);
   }
 
-  // repeated double embeddings = 5 [packed = true];
+  // repeated double embeddings = 2 [packed = true];
   if (this->_internal_embeddings_size() > 0) {
-    target = stream->WriteFixedPacked(5, _internal_embeddings(), target);
+    target = stream->WriteFixedPacked(2, _internal_embeddings(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -286,7 +286,7 @@ size_t Face::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated double embeddings = 5 [packed = true];
+  // repeated double embeddings = 2 [packed = true];
   {
     unsigned int count = static_cast<unsigned int>(this->_internal_embeddings_size());
     size_t data_size = 8UL * count;

@@ -1,6 +1,8 @@
 ######## CREATE PROTO OBJECT ###############################
 # protoc -I=$PWD --python_out=$PWD $PWD/face_dataset.proto
 # protoc -I=$PWD --cpp_out=$PWD $PWD/face_dataset.proto
+# protoc -I=$PWD --objc_out=$PWD $PWD/face_dataset.proto
+# protoc -I=$PWD --java_out=$PWD $PWD/face_dataset.proto
 ############################################################
 
 ############################################################

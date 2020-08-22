@@ -190,10 +190,10 @@ class Face PROTOBUF_FINAL :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kEmbeddingsFieldNumber = 5,
+    kEmbeddingsFieldNumber = 2,
     kNameFieldNumber = 1,
   };
-  // repeated double embeddings = 5 [packed = true];
+  // repeated double embeddings = 2 [packed = true];
   int embeddings_size() const;
   private:
   int _internal_embeddings_size() const;
@@ -515,7 +515,7 @@ inline void Face::unsafe_arena_set_allocated_name(
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:dataset.Face.name)
 }
 
-// repeated double embeddings = 5 [packed = true];
+// repeated double embeddings = 2 [packed = true];
 inline int Face::_internal_embeddings_size() const {
   return embeddings_.size();
 }
