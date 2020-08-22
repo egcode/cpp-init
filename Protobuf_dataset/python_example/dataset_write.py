@@ -12,7 +12,7 @@ import sys
 
 face_data = face_dataset_pb2.Face()
 face_data.name = "Eugene"
-face_data.embeddings.extend([0.1, 0.2, 0.3]) 
+face_data.embeddings.extend([0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9]) 
 
 # print(face_data.SerializeToString())
 
