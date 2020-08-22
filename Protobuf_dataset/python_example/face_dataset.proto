@@ -1,0 +1,12 @@
+syntax = "proto2";
+
+package dataset;
+
+message Face {
+  required string name = 1;
+  repeated double embeddings = 5 [packed=true];
+}
+
+message Dataset {
+  repeated Face face = 1;
+}
