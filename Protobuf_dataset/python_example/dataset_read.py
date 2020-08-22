@@ -1,5 +1,7 @@
 ############################################################
-# python3 dataset_read.py aaa.aaa
+# python3 dataset_read.py aaa.protobuf
+# python3 dataset_read.py ../dataset_targarien.protobuf
+# python3 dataset_read.py ../dataset_golovan.protobuf
 ############################################################
 
 import face_dataset_pb2
