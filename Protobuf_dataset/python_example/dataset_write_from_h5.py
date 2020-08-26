@@ -3,7 +3,7 @@
 # python3 dataset_write_from_h5.py ../dataset_golovan.h5 ../dataset_golovan.protobuf
 ############################################################
 
-import face_dataset_pb2
+import face_dataset_pb2 as face_dataset
 import sys
 import h5py                                                                                                                                                                                   
 
@@ -14,7 +14,7 @@ if len(sys.argv) != 3:
   sys.exit(-1)
 
 
-dataset = face_dataset_pb2.Dataset()
+dataset = face_dataset.DatasetObject()
 tempDatasetArr = []
 
 with h5py.File(sys.argv[1], 'r') as f:
@@ -24,13 +24,13 @@ with h5py.File(sys.argv[1], 'r') as f:
         # print("Name: " + person)
         # print("Embedding: " + str(embedding_premade))
 
-        face = face_dataset_pb2.Face()
+        face = face_dataset.FaceObject()
         face.name = person
         face.embeddings.extend(embedding_premade) 
 
         tempDatasetArr.append(face)
 
-dataset.faces.extend(tempDatasetArr)
+dataset.faceObjects.extend(tempDatasetArr)
 
 
 print(60*"=" + "Print Dataset")

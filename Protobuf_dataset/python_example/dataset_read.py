@@ -4,7 +4,7 @@
 # python3 dataset_read.py ../dataset_golovan.protobuf
 ############################################################
 
-import face_dataset_pb2
+import face_dataset_pb2 as face_dataset
 import sys
 
 # Main procedure:  Reads the entire address book from a file and prints all
@@ -13,7 +13,7 @@ if len(sys.argv) != 2:
   print("Usage:", sys.argv[0], "DATASET_FILE")
   sys.exit(-1)
 
-dataset = face_dataset_pb2.Dataset()
+dataset = face_dataset.DatasetObject()
 
 # Read the existing address book.
 f = open(sys.argv[1], "rb")
