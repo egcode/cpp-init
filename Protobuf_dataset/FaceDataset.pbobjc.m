@@ -24,7 +24,7 @@
 // Forward declarations of Objective C classes that we can use as
 // static values in struct initializers.
 // We don't use [Foo class] because it is not a static value.
-GPBObjCClassDeclaration(Face);
+GPBObjCClassDeclaration(FaceObject);
 
 #pragma mark - FaceDatasetRoot
 
@@ -43,24 +43,24 @@ static GPBFileDescriptor *FaceDatasetRoot_FileDescriptor(void) {
   static GPBFileDescriptor *descriptor = NULL;
   if (!descriptor) {
     GPB_DEBUG_CHECK_RUNTIME_VERSIONS();
-    descriptor = [[GPBFileDescriptor alloc] initWithPackage:@"dataset"
+    descriptor = [[GPBFileDescriptor alloc] initWithPackage:@"dataset_faces"
                                                      syntax:GPBFileSyntaxProto2];
   }
   return descriptor;
 }
 
-#pragma mark - Face
+#pragma mark - FaceObject
 
-@implementation Face
+@implementation FaceObject
 
 @dynamic hasName, name;
 @dynamic embeddingsArray, embeddingsArray_Count;
 
-typedef struct Face__storage_ {
+typedef struct FaceObject__storage_ {
   uint32_t _has_storage_[1];
   NSString *name;
   GPBDoubleArray *embeddingsArray;
-} Face__storage_;
+} FaceObject__storage_;
 
 // This method is threadsafe because it is initially called
 // in +initialize for each subclass.
@@ -71,29 +71,29 @@ typedef struct Face__storage_ {
       {
         .name = "name",
         .dataTypeSpecific.clazz = Nil,
-        .number = Face_FieldNumber_Name,
+        .number = FaceObject_FieldNumber_Name,
         .hasIndex = 0,
-        .offset = (uint32_t)offsetof(Face__storage_, name),
+        .offset = (uint32_t)offsetof(FaceObject__storage_, name),
         .flags = GPBFieldRequired,
         .dataType = GPBDataTypeString,
       },
       {
         .name = "embeddingsArray",
         .dataTypeSpecific.clazz = Nil,
-        .number = Face_FieldNumber_EmbeddingsArray,
+        .number = FaceObject_FieldNumber_EmbeddingsArray,
         .hasIndex = GPBNoHasBit,
-        .offset = (uint32_t)offsetof(Face__storage_, embeddingsArray),
+        .offset = (uint32_t)offsetof(FaceObject__storage_, embeddingsArray),
         .flags = (GPBFieldFlags)(GPBFieldRepeated | GPBFieldPacked),
         .dataType = GPBDataTypeDouble,
       },
     };
     GPBDescriptor *localDescriptor =
-        [GPBDescriptor allocDescriptorForClass:[Face class]
+        [GPBDescriptor allocDescriptorForClass:[FaceObject class]
                                      rootClass:[FaceDatasetRoot class]
                                           file:FaceDatasetRoot_FileDescriptor()
                                         fields:fields
                                     fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
-                                   storageSize:sizeof(Face__storage_)
+                                   storageSize:sizeof(FaceObject__storage_)
                                          flags:(GPBDescriptorInitializationFlags)(GPBDescriptorInitializationFlag_UsesClassRefs | GPBDescriptorInitializationFlag_Proto3OptionalKnown)];
     #if defined(DEBUG) && DEBUG
       NSAssert(descriptor == nil, @"Startup recursed!");
@@ -105,16 +105,16 @@ typedef struct Face__storage_ {
 
 @end
 
-#pragma mark - Dataset
+#pragma mark - DatasetObject
 
-@implementation Dataset
+@implementation DatasetObject
 
-@dynamic facesArray, facesArray_Count;
+@dynamic faceObjectsArray, faceObjectsArray_Count;
 
-typedef struct Dataset__storage_ {
+typedef struct DatasetObject__storage_ {
   uint32_t _has_storage_[1];
-  NSMutableArray *facesArray;
-} Dataset__storage_;
+  NSMutableArray *faceObjectsArray;
+} DatasetObject__storage_;
 
 // This method is threadsafe because it is initially called
 // in +initialize for each subclass.
@@ -123,23 +123,28 @@ typedef struct Dataset__storage_ {
   if (!descriptor) {
     static GPBMessageFieldDescription fields[] = {
       {
-        .name = "facesArray",
-        .dataTypeSpecific.clazz = GPBObjCClass(Face),
-        .number = Dataset_FieldNumber_FacesArray,
+        .name = "faceObjectsArray",
+        .dataTypeSpecific.clazz = GPBObjCClass(FaceObject),
+        .number = DatasetObject_FieldNumber_FaceObjectsArray,
         .hasIndex = GPBNoHasBit,
-        .offset = (uint32_t)offsetof(Dataset__storage_, facesArray),
-        .flags = GPBFieldRepeated,
+        .offset = (uint32_t)offsetof(DatasetObject__storage_, faceObjectsArray),
+        .flags = (GPBFieldFlags)(GPBFieldRepeated | GPBFieldTextFormatNameCustom),
         .dataType = GPBDataTypeMessage,
       },
     };
     GPBDescriptor *localDescriptor =
-        [GPBDescriptor allocDescriptorForClass:[Dataset class]
+        [GPBDescriptor allocDescriptorForClass:[DatasetObject class]
                                      rootClass:[FaceDatasetRoot class]
                                           file:FaceDatasetRoot_FileDescriptor()
                                         fields:fields
                                     fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
-                                   storageSize:sizeof(Dataset__storage_)
+                                   storageSize:sizeof(DatasetObject__storage_)
                                          flags:(GPBDescriptorInitializationFlags)(GPBDescriptorInitializationFlag_UsesClassRefs | GPBDescriptorInitializationFlag_Proto3OptionalKnown)];
+#if !GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
+    static const char *extraTextFormatInfo =
+        "\001\001\000faceObjects\000";
+    [localDescriptor setupExtraTextInfo:extraTextFormatInfo];
+#endif  // !GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
     #if defined(DEBUG) && DEBUG
       NSAssert(descriptor == nil, @"Startup recursed!");
     #endif  // DEBUG

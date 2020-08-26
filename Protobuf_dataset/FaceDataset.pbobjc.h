@@ -27,7 +27,7 @@
 
 CF_EXTERN_C_BEGIN
 
-@class Face;
+@class FaceObject;
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -46,14 +46,14 @@ NS_ASSUME_NONNULL_BEGIN
 GPB_FINAL @interface FaceDatasetRoot : GPBRootObject
 @end
 
-#pragma mark - Face
+#pragma mark - FaceObject
 
-typedef GPB_ENUM(Face_FieldNumber) {
-  Face_FieldNumber_Name = 1,
-  Face_FieldNumber_EmbeddingsArray = 2,
+typedef GPB_ENUM(FaceObject_FieldNumber) {
+  FaceObject_FieldNumber_Name = 1,
+  FaceObject_FieldNumber_EmbeddingsArray = 2,
 };
 
-GPB_FINAL @interface Face : GPBMessage
+GPB_FINAL @interface FaceObject : GPBMessage
 
 @property(nonatomic, readwrite, copy, null_resettable) NSString *name;
 /** Test to see if @c name has been set. */
@@ -65,17 +65,17 @@ GPB_FINAL @interface Face : GPBMessage
 
 @end
 
-#pragma mark - Dataset
+#pragma mark - DatasetObject
 
-typedef GPB_ENUM(Dataset_FieldNumber) {
-  Dataset_FieldNumber_FacesArray = 1,
+typedef GPB_ENUM(DatasetObject_FieldNumber) {
+  DatasetObject_FieldNumber_FaceObjectsArray = 1,
 };
 
-GPB_FINAL @interface Dataset : GPBMessage
+GPB_FINAL @interface DatasetObject : GPBMessage
 
-@property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<Face*> *facesArray;
-/** The number of items in @c facesArray without causing the array to be created. */
-@property(nonatomic, readonly) NSUInteger facesArray_Count;
+@property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<FaceObject*> *faceObjectsArray;
+/** The number of items in @c faceObjectsArray without causing the array to be created. */
+@property(nonatomic, readonly) NSUInteger faceObjectsArray_Count;
 
 @end
 
