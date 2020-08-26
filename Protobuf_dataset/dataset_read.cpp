@@ -24,7 +24,19 @@ void ListPeople(const dataset_faces::DatasetObject& dataset_object) {
     const dataset_faces::FaceObject& faceObject = dataset_object.faceobjects(i);
 
     cout << "\n  Name: " << faceObject.name() << endl;
-    // cout << "  Embeddings: " << faceObject.embeddings() << endl;
+
+
+    double embedding[512];
+    // getting data from protobuf
+    for (int j = 0; j < faceObject.embeddings_size(); j++) 
+    {
+      embedding[j] = faceObject.embeddings(j);
+    }
+
+
+    // printing embedding
+    for (int j = 0; j < (sizeof(embedding)/sizeof(*embedding)); j++) 
+      cout << embedding[j];
 
   }
 }
