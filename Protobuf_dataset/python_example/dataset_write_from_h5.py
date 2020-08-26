@@ -30,7 +30,7 @@ with h5py.File(sys.argv[1], 'r') as f:
 
         tempDatasetArr.append(face)
 
-dataset.faceObjects.extend(tempDatasetArr)
+dataset.faceobjects.extend(tempDatasetArr)
 
 
 print(60*"=" + "Print Dataset")

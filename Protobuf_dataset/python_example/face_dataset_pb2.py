@@ -19,7 +19,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto2',
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x12\x66\x61\x63\x65_dataset.proto\x12\rdataset_faces\"2\n\nFaceObject\x12\x0c\n\x04name\x18\x01 \x02(\t\x12\x16\n\nembeddings\x18\x02 \x03(\x01\x42\x02\x10\x01\"?\n\rDatasetObject\x12.\n\x0b\x66\x61\x63\x65Objects\x18\x01 \x03(\x0b\x32\x19.dataset_faces.FaceObject'
+  serialized_pb=b'\n\x12\x66\x61\x63\x65_dataset.proto\x12\rdataset_faces\"2\n\nFaceObject\x12\x0c\n\x04name\x18\x01 \x02(\t\x12\x16\n\nembeddings\x18\x02 \x03(\x01\x42\x02\x10\x01\"?\n\rDatasetObject\x12.\n\x0b\x66\x61\x63\x65objects\x18\x01 \x03(\x0b\x32\x19.dataset_faces.FaceObject'
 )
 
 
@@ -73,7 +73,7 @@ _DATASETOBJECT = _descriptor.Descriptor(
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='faceObjects', full_name='dataset_faces.DatasetObject.faceObjects', index=0,
+      name='faceobjects', full_name='dataset_faces.DatasetObject.faceobjects', index=0,
       number=1, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
@@ -95,7 +95,7 @@ _DATASETOBJECT = _descriptor.Descriptor(
   serialized_end=152,
 )
 
-_DATASETOBJECT.fields_by_name['faceObjects'].message_type = _FACEOBJECT
+_DATASETOBJECT.fields_by_name['faceobjects'].message_type = _FACEOBJECT
 DESCRIPTOR.message_types_by_name['FaceObject'] = _FACEOBJECT
 DESCRIPTOR.message_types_by_name['DatasetObject'] = _DATASETOBJECT
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)

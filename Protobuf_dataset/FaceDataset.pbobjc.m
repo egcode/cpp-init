@@ -109,11 +109,11 @@ typedef struct FaceObject__storage_ {
 
 @implementation DatasetObject
 
-@dynamic faceObjectsArray, faceObjectsArray_Count;
+@dynamic faceobjectsArray, faceobjectsArray_Count;
 
 typedef struct DatasetObject__storage_ {
   uint32_t _has_storage_[1];
-  NSMutableArray *faceObjectsArray;
+  NSMutableArray *faceobjectsArray;
 } DatasetObject__storage_;
 
 // This method is threadsafe because it is initially called
@@ -123,12 +123,12 @@ typedef struct DatasetObject__storage_ {
   if (!descriptor) {
     static GPBMessageFieldDescription fields[] = {
       {
-        .name = "faceObjectsArray",
+        .name = "faceobjectsArray",
         .dataTypeSpecific.clazz = GPBObjCClass(FaceObject),
-        .number = DatasetObject_FieldNumber_FaceObjectsArray,
+        .number = DatasetObject_FieldNumber_FaceobjectsArray,
         .hasIndex = GPBNoHasBit,
-        .offset = (uint32_t)offsetof(DatasetObject__storage_, faceObjectsArray),
-        .flags = (GPBFieldFlags)(GPBFieldRepeated | GPBFieldTextFormatNameCustom),
+        .offset = (uint32_t)offsetof(DatasetObject__storage_, faceobjectsArray),
+        .flags = GPBFieldRepeated,
         .dataType = GPBDataTypeMessage,
       },
     };
@@ -140,11 +140,6 @@ typedef struct DatasetObject__storage_ {
                                     fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
                                    storageSize:sizeof(DatasetObject__storage_)
                                          flags:(GPBDescriptorInitializationFlags)(GPBDescriptorInitializationFlag_UsesClassRefs | GPBDescriptorInitializationFlag_Proto3OptionalKnown)];
-#if !GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
-    static const char *extraTextFormatInfo =
-        "\001\001\000faceObjects\000";
-    [localDescriptor setupExtraTextInfo:extraTextFormatInfo];
-#endif  // !GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
     #if defined(DEBUG) && DEBUG
       NSAssert(descriptor == nil, @"Startup recursed!");
     #endif  // DEBUG

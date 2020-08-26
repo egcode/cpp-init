@@ -88,7 +88,7 @@ static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] =
 const char descriptor_table_protodef_face_5fdataset_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
   "\n\022face_dataset.proto\022\rdataset_faces\"2\n\nF"
   "aceObject\022\014\n\004name\030\001 \002(\t\022\026\n\nembeddings\030\002 "
-  "\003(\001B\002\020\001\"\?\n\rDatasetObject\022.\n\013faceObjects\030"
+  "\003(\001B\002\020\001\"\?\n\rDatasetObject\022.\n\013faceobjects\030"
   "\001 \003(\0132\031.dataset_faces.FaceObject"
   ;
 static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_face_5fdataset_2eproto_deps[1] = {
@@ -440,7 +440,7 @@ const char* DatasetObject::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
     CHK_(ptr);
     switch (tag >> 3) {
-      // repeated .dataset_faces.FaceObject faceObjects = 1;
+      // repeated .dataset_faces.FaceObject faceobjects = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
           ptr -= 1;
@@ -480,7 +480,7 @@ failure:
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // repeated .dataset_faces.FaceObject faceObjects = 1;
+  // repeated .dataset_faces.FaceObject faceobjects = 1;
   for (unsigned int i = 0,
       n = static_cast<unsigned int>(this->_internal_faceobjects_size()); i < n; i++) {
     target = stream->EnsureSpace(target);
@@ -504,7 +504,7 @@ size_t DatasetObject::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated .dataset_faces.FaceObject faceObjects = 1;
+  // repeated .dataset_faces.FaceObject faceobjects = 1;
   total_size += 1UL * this->_internal_faceobjects_size();
   for (const auto& msg : this->faceobjects_) {
     total_size +=

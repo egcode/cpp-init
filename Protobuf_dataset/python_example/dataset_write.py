@@ -27,7 +27,7 @@ face3.embeddings.extend([0.31, 0.32, 0.33, 0.34, 0.35, 0.36, 0.37, 0.38, 0.39])
 
 
 dataset = face_dataset.DatasetObject()
-dataset.faceObjects.extend([face1, face2, face3])
+dataset.faceobjects.extend([face1, face2, face3])
 
 # print(face_data.SerializeToString())
 

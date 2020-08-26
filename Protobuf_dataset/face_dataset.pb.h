@@ -380,9 +380,9 @@ class DatasetObject PROTOBUF_FINAL :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kFaceObjectsFieldNumber = 1,
+    kFaceobjectsFieldNumber = 1,
   };
-  // repeated .dataset_faces.FaceObject faceObjects = 1;
+  // repeated .dataset_faces.FaceObject faceobjects = 1;
   int faceobjects_size() const;
   private:
   int _internal_faceobjects_size() const;
@@ -566,7 +566,7 @@ FaceObject::mutable_embeddings() {
 
 // DatasetObject
 
-// repeated .dataset_faces.FaceObject faceObjects = 1;
+// repeated .dataset_faces.FaceObject faceobjects = 1;
 inline int DatasetObject::_internal_faceobjects_size() const {
   return faceobjects_.size();
 }
@@ -577,31 +577,31 @@ inline void DatasetObject::clear_faceobjects() {
   faceobjects_.Clear();
 }
 inline ::dataset_faces::FaceObject* DatasetObject::mutable_faceobjects(int index) {
-  // @@protoc_insertion_point(field_mutable:dataset_faces.DatasetObject.faceObjects)
+  // @@protoc_insertion_point(field_mutable:dataset_faces.DatasetObject.faceobjects)
   return faceobjects_.Mutable(index);
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::dataset_faces::FaceObject >*
 DatasetObject::mutable_faceobjects() {
-  // @@protoc_insertion_point(field_mutable_list:dataset_faces.DatasetObject.faceObjects)
+  // @@protoc_insertion_point(field_mutable_list:dataset_faces.DatasetObject.faceobjects)
   return &faceobjects_;
 }
 inline const ::dataset_faces::FaceObject& DatasetObject::_internal_faceobjects(int index) const {
   return faceobjects_.Get(index);
 }
 inline const ::dataset_faces::FaceObject& DatasetObject::faceobjects(int index) const {
-  // @@protoc_insertion_point(field_get:dataset_faces.DatasetObject.faceObjects)
+  // @@protoc_insertion_point(field_get:dataset_faces.DatasetObject.faceobjects)
   return _internal_faceobjects(index);
 }
 inline ::dataset_faces::FaceObject* DatasetObject::_internal_add_faceobjects() {
   return faceobjects_.Add();
 }
 inline ::dataset_faces::FaceObject* DatasetObject::add_faceobjects() {
-  // @@protoc_insertion_point(field_add:dataset_faces.DatasetObject.faceObjects)
+  // @@protoc_insertion_point(field_add:dataset_faces.DatasetObject.faceobjects)
   return _internal_add_faceobjects();
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::dataset_faces::FaceObject >&
 DatasetObject::faceobjects() const {
-  // @@protoc_insertion_point(field_list:dataset_faces.DatasetObject.faceObjects)
+  // @@protoc_insertion_point(field_list:dataset_faces.DatasetObject.faceobjects)
   return faceobjects_;
 }
 

@@ -8,5 +8,5 @@ message FaceObject {
 }
 
 message DatasetObject {
-  repeated FaceObject faceObjects = 1;
+  repeated FaceObject faceobjects = 1;
 }

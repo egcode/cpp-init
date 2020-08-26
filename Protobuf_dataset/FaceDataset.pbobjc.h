@@ -68,14 +68,14 @@ GPB_FINAL @interface FaceObject : GPBMessage
 #pragma mark - DatasetObject
 
 typedef GPB_ENUM(DatasetObject_FieldNumber) {
-  DatasetObject_FieldNumber_FaceObjectsArray = 1,
+  DatasetObject_FieldNumber_FaceobjectsArray = 1,
 };
 
 GPB_FINAL @interface DatasetObject : GPBMessage
 
-@property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<FaceObject*> *faceObjectsArray;
-/** The number of items in @c faceObjectsArray without causing the array to be created. */
-@property(nonatomic, readonly) NSUInteger faceObjectsArray_Count;
+@property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<FaceObject*> *faceobjectsArray;
+/** The number of items in @c faceobjectsArray without causing the array to be created. */
+@property(nonatomic, readonly) NSUInteger faceobjectsArray_Count;
 
 @end
 
