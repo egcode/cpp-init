@@ -19,7 +19,7 @@ rm -rf build;mkdir build;cd build;cmake \
 
 
 // Iterates though all people in the AddressBook and prints info about them.
-void ListPeople(const dataset_faces::DatasetObject& dataset_object) {
+void ListFaces(const dataset_faces::DatasetObject& dataset_object) {
   for (int i = 0; i < dataset_object.faceobjects_size(); i++) {
     const dataset_faces::FaceObject& faceObject = dataset_object.faceobjects(i);
 
@@ -64,7 +64,7 @@ int main(int argc, char* argv[]) {
     }
   }
 
-  ListPeople(dataset_object);
+  ListFaces(dataset_object);
 
   // Optional:  Delete all global objects allocated by libprotobuf.
   google::protobuf::ShutdownProtobufLibrary();
