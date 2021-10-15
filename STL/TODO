@@ -1,0 +1,31 @@
+
+/*
+- vector
+- stack
+- dictionary
+- queue
+- priority_queue
+- set
+
+- split array like pythons arr[index:] or arr[:index]
+- join array of characters into string
+- split string into array of chars
+- sort string
+
+- reverse array
+- reverse string
+
+- tuple.
+- sort aray of tuple or objects by element
+
+- add or delete elements in dictionary
+
+- turn set into array
+- turn array into set
+- join set
+- set's intersection
+ 
+- random element in array
+
+
+*/
