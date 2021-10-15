@@ -17,10 +17,7 @@ push_back() — It push the elements into a vector from the back
 emplace_back() - Faster version push the elements into a vector from the back
 */
 
-
-
 #include <bits/stdc++.h>
-
 using namespace std;
 
 // used c+++ stl iterator
