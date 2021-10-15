@@ -1,5 +1,5 @@
 /*
-g++ vector.cpp -std=c++11
+g++ vector.cpp -std=c++11;./a.out
 
 begin() — Returns an iterator to the first element in the vector
 end() — Returns an iterator to a location past last element in the vector
@@ -50,9 +50,12 @@ int main(){
     }
 
     for(int i=0; i<100; i+=10) { 
-    numbers.push_back(i);
-    numbers.emplace_back(i+1);
+        numbers.push_back(i);
+        numbers.emplace_back(i+1);
     }
+
+    cout << "vector front: " << numbers.front() << endl;
+    cout << "vector back: " << numbers.back() << endl;
 
     vector <int>::iterator it;
     cout<<"\nAAA";
