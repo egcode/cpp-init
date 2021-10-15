@@ -44,45 +44,51 @@ void shorthand(const vector<int> & v){
 
 int main(){
 
-  vector <int> numbers;
-  if (numbers.empty()) { 
-    cout << "The vector is empty :(" << endl;
-  }
+    vector <int> numbers;
+    if (numbers.empty()) { 
+        cout << "The vector is empty :(" << endl;
+    }
 
-  for(int i=0; i<100; i+=10) { 
+    for(int i=0; i<100; i+=10) { 
     numbers.push_back(i);
     numbers.emplace_back(i+1);
-  }
+    }
 
-  // iterating over the vector, declaring the iterator
-  vector <int>::iterator it;
-  cout << "The vector contains: ";
-  for (it=numbers.begin(); it!=numbers.end(); it++) {
-    cout << "  " << *it;
-  }
+    vector <int>::iterator it;
+    cout<<"\nAAA";
+    for (it=numbers.begin(); it!=numbers.end(); it++) {
+        cout << " " << *it;
+    }
 
-  // getting value at a particular position
-  int position = 5;
-  cout<<"\nVector at position "<<position<<" contains "<<numbers.at(position)<<endl;
+    cout<<"\nBBB";
+    for(int i=0;i<numbers.size();i++){
+        cout << " " << numbers[i];
+    }
 
-  // deleting an element at a position
-  numbers.erase(numbers.begin() + position);
-  cout<<"Vector at position "<<position<<" contains "<<numbers.at(position)<<endl;
+    cout<<"\nCCC";
+    for(int num : numbers)
+        cout << " " << num;
 
-  // deleting a range of elements, first two elements
-  // NOTE: You may expect elements at 0, 1, and 2 to be deleted
-  // but index 2 is not inclusive.
-  numbers.erase(numbers.begin(), numbers.begin()+2);
-  cout << "The vector contains: ";
-  for (it=numbers.begin(); it!=numbers.end(); it++) {
-    cout << "  " << *it;
-  }
 
-  // Clearing the vector
-  numbers.clear();
-  if (numbers.empty()){
-    cout << "\nThe vector is now empty again :(";
-  }
+    int position = 5;
+    cout<<"\nVector at position "<<position<<" contains "<<numbers.at(position)<<endl;
+
+    numbers.erase(numbers.begin() + position);
+    cout<<"Vector at position "<<position<<" contains "<<numbers.at(position)<<endl;
+
+    // deleting a range of elements, first two elements
+    // index 2 is not inclusive.
+    numbers.erase(numbers.begin(), numbers.begin()+2);
+    cout << "The vector contains: ";
+    for (it=numbers.begin(); it!=numbers.end(); it++) {
+        cout << "  " << *it;
+    }
+
+
+    numbers.clear();
+    if (numbers.empty()){
+        cout << "\nThe vector is now empty again :(";
+    }
     
     return 0;
 }
