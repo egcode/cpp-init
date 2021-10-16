@@ -1,5 +1,6 @@
 .vscode/
 /STL/a.out
+/STL/algorithms/a.out
 # Prerequisites
 *.d
 
