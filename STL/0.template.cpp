@@ -1,5 +1,5 @@
 /*
-g++ file.cpp -std=c++11
+g++ file.cpp -std=c++11;./a.out
 */
 
 #include <bits/stdc++.h>
