@@ -1,5 +1,5 @@
 /*
-g++ algorithms.cpp -std=c++11;./a.out
+g++ common.cpp -std=c++11;./a.out
 */
 
 #include <bits/stdc++.h>

@@ -1,5 +1,5 @@
 /*
-g++ algorithms2.cpp -std=c++11;./a.out
+g++ sort_vector.cpp -std=c++11;./a.out
 */
 
 #include <bits/stdc++.h>
