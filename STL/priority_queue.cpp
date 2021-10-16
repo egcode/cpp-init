@@ -1,5 +1,8 @@
 /*
 g++ priority_queue.cpp -std=c++11;./a.out
+
+priority_queue<Type, vector<Type>, comparator> min_heap;
+
 */
 
 #include <bits/stdc++.h>
@@ -20,8 +23,6 @@ struct is_older {
 bool compare_names(struct Person p1, struct Person p2) {
     	return p1.name < p2.name;
 }
-
-bool way_to_sort(int i, int j) { return i > j; }
 
 
 
