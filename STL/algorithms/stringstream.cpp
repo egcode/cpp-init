@@ -15,6 +15,8 @@ int main(){
 
     cout << "------------Sentence into Vector:"<<endl;
     string str= "Welcome to coding with art";
+    cout << "example string: "<< str << endl;
+
     stringstream ss(str);       // declare stringstream for string str
     string word;      
     vector<string> words;  
@@ -26,6 +28,24 @@ int main(){
     cout<<"No of words : "<< wordcount <<"\n";
     for(string word : words)
         cout<<word<<"  ";
+    cout<<"\n";
+
+
+    cout << "------------Extract words from a sentence with custom separator:"<<endl;
+    string str1="Enjoy-Coding-With-Art";
+    cout << "example string: "<< str1 << endl;
+
+    stringstream ss1(str1);       // declare stringstream for string str
+    string word1;      
+    vector<string> words1;  
+    int wordcount1 = 0;
+    while(getline(ss1, word1,'-')) {       // use getline instead of cin to provide custom separator
+        words1.push_back(word1);
+        wordcount1++;
+    }
+    cout<<"No of words : "<< wordcount1 <<"\n";
+    for(string word1 : words1)
+        cout<<word1<<" ";
     cout<<"\n";
 
     cout << "------------String to number convertion:"<<endl;
