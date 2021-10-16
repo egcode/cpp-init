@@ -90,5 +90,25 @@ int main(){
         cout << "\nThe vector is now empty again :(";
     }
     
+
+    /////// Modify Vector
+
+    cout << "\n\nVector of pairs vefore modification: "<<endl;
+    vector <pair<int, int>> vec;
+    vec={{1, 2}, { 3, 4}};
+    for (auto p: vec)
+        cout<<"      "<<p.first<<" "<<p.second;
+    cout<<"\n";
+
+    // Modifing values
+    for (auto &p: vec)
+        p.first *= 100;
+
+    cout << "\nVector of pairs after modification: "<<endl;
+    for (auto p: vec)
+        cout<<"      "<<p.first<<" "<<p.second;
+    cout<<"\n";
+
+
     return 0;
 }
